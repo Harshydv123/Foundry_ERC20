@@ -15,8 +15,8 @@ contract OurTokenTest is Test {
     uint256 public constant INITIAL_SUPPLY = 1100 ether;
 
     function setUp() public {
-        deployer=new DeployOurToken();
-        ourToken=deployer.run();
+        deployer = new DeployOurToken();
+        ourToken = deployer.run();
     }
 
     // ---  Basic Tests ---
@@ -42,10 +42,7 @@ contract OurTokenTest is Test {
         ourToken.transfer(ALICE, transferAmount);
 
         assertEq(ourToken.balanceOf(ALICE), transferAmount);
-        assertEq(
-            ourToken.balanceOf(msg.sender),
-            INITIAL_SUPPLY - transferAmount
-        );
+        assertEq(ourToken.balanceOf(msg.sender), INITIAL_SUPPLY - transferAmount);
     }
 
     function testTransferFailsIfNotEnoughBalance() public {
@@ -81,10 +78,7 @@ contract OurTokenTest is Test {
         ourToken.transferFrom(msg.sender, BOB, spendAmount);
 
         assertEq(ourToken.balanceOf(BOB), spendAmount);
-        assertEq(
-            ourToken.allowance(msg.sender, ALICE),
-            allowanceAmount - spendAmount
-        );
+        assertEq(ourToken.allowance(msg.sender, ALICE), allowanceAmount - spendAmount);
     }
 
     function testTransferFromFailsWithoutEnoughAllowance() public {
