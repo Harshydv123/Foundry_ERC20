@@ -66,3 +66,5 @@ $ cast --help
 ```
 # Foundry_ERC20
 # Foundry_ERC20
+# Foundry_ERC20 git init git add README.md git commit -m first commit git branch -M main git remote add origin https://github.com/Harshydv123/Foundry_ERC20.git git push -u origin main
+# Foundry_ERC20
