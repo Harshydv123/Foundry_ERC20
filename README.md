@@ -24,7 +24,7 @@ This project demonstrates:
 - **GPG-signed commits (optional)** for verified contributions
 
 ---
-
+```
 ## 🧩 Project Structure
 
 ├── src/
@@ -39,11 +39,7 @@ This project demonstrates:
 ├── foundry.toml # Foundry configuration
 ├── Makefile # Common build/test commands
 └── README.md
-
-yaml
-Copy code
-
----
+```
 
 ## 💻 Contract Details
 
