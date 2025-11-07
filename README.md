@@ -55,6 +55,7 @@ contract OurToken is ERC20 {
         _mint(msg.sender, initialSupply);
     }
 }
+```
 ✅ Features:
 
 Standard ERC-20 functionality (transfer, approve, allowance)
@@ -65,28 +66,22 @@ Uses OpenZeppelin’s battle-tested ERC-20 implementation
 
 🚀 Deployment
 1️⃣ Compile the contracts
-bash
-Copy code
+
 forge build
 2️⃣ Run tests
-bash
-Copy code
+
 forge test
 3️⃣ Deploy locally (Anvil)
 Start a local chain:
 
-bash
-Copy code
 anvil
 Deploy using Foundry’s script:
 
-bash
-Copy code
+
 forge script script/DeployOurToken.s.sol:DeployOurToken --rpc-url http://127.0.0.1:8545 --broadcast
 To deploy to a live network (e.g., Sepolia or Mainnet):
 
-bash
-Copy code
+
 forge script script/DeployOurToken.s.sol:DeployOurToken \
     --rpc-url $SEPOLIA_RPC_URL \
     --private-key $PRIVATE_KEY \
@@ -94,8 +89,6 @@ forge script script/DeployOurToken.s.sol:DeployOurToken \
     --verify
 🧪 Tests
 Run the test suite:
-bash
-Copy code
 forge test -vv
 The tests cover:
 
@@ -114,7 +107,6 @@ The tests cover:
 Example test output:
 
 less
-Copy code
 Ran 10 tests for test/OurToken.t.sol
 [PASS] testTransferFromWorksWithAllowance() (gas: 29240)
 [PASS] testTotalSupplyRemainsConstantAfterTransfers() (gas: 18832)
